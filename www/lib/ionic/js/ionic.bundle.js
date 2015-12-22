@@ -1785,8 +1785,8 @@ window.ionic.version = '1.2.1-nightly-1867';
 
       } else if (!this.preventedFirstMove && ev.srcEvent.type == 'touchmove') {
         // Prevent gestures that are not intended for this event handler from firing subsequent times
-        if (inst.options.prevent_default_directions.length > 0
-            && inst.options.prevent_default_directions.indexOf(ev.direction) != -1) {
+        if (inst.options.prevent_default_directions.length === 0
+            || inst.options.prevent_default_directions.indexOf(ev.direction) != -1) {
           ev.srcEvent.preventDefault();
         }
         this.preventedFirstMove = true;
