@@ -1,8 +1,7 @@
-body {
-  
-}
 #dragElement {
+  position: absolute;
   width: 150px;
   height: 150px;
   background: red;
+  z-index: 5;
 }
